@@ -1,0 +1,21 @@
+// main: ../../../../../../style.scss
+.staff-single {
+    .staff-name,
+    .staff-position,
+    .teaser-content {
+        text-align: center;
+    }
+    .links-container {
+        align-items: center;
+    }
+    @media screen and (min-width: $tablet) {
+        .staff-name,
+        .staff-position,
+        .teaser-content {
+            text-align: unset;
+        }
+        .links-container {
+            align-items: flex-start;
+        }
+    }
+}

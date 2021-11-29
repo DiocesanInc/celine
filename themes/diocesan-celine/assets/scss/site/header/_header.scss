@@ -1,0 +1,27 @@
+// main: ../../../../../style.scss
+.site-header#masthead {
+    position: absolute;
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
+    transition: 0.25s ease-in;
+    z-index: 9999;
+    .the-header {
+        @import "bottom-bar";
+        .header_logo.top {
+            display: block;
+        }
+        .header_logo.sticky {
+            display: none;
+        }
+    }
+    &.sticky .the-header {
+        .header_logo.sticky {
+            display: block;
+        }
+        .header_logo.top {
+            display: none;
+        }
+    }
+    @import "../../navigation/sticky";
+}

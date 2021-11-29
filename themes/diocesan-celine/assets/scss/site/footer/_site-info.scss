@@ -1,0 +1,41 @@
+// main: ../../../../../style.scss
+.site-info-container {
+    @include flex("b");
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: relative;
+    div,
+    a,
+    span {
+        font-size: var(--fs-100);
+    }
+
+    a {
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            text-decoration: var(--link-text-decoration-hover);
+        }
+    }
+
+    .hearts {
+        font-size: 1rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        background: var(--clr-primary);
+        width: 90%;
+        top: 0;
+    }
+
+    @media screen and (max-width: 575px) {
+        .site-info,
+        .diocesan {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

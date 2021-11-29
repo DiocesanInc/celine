@@ -1,0 +1,16 @@
+.featured-content {
+    display: flex;
+    flex-direction: column;
+    .featured-content-item-wrapper {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .featured-content {
+        flex-direction: row;
+        .teaser-box + .teaser-box {
+            margin-left: 2rem;
+        }
+    }
+}

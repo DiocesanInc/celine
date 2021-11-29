@@ -1,0 +1,40 @@
+// main: ../../../../../../style.scss
+.featured-buttons {
+    position: relative;
+    top: -110px;
+    background: white;
+    padding: 25px 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    .featured-buttons-wrapper {
+        display: inline-block;
+        text-align: left;
+        padding: 0 1rem;
+        .featured-button {
+            display: block;
+            font-size: var(--fs-500);
+            color: var(--font-main);
+        }
+    }
+    .featured-button + .featured-button {
+        margin-top: 40px;
+    }
+    .featured-button-icon {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .featured-buttons {
+        top: -35px;
+        margin-bottom: 4rem;
+        .featured-buttons-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .featured-button + .featured-button {
+            margin-top: 0;
+        }
+    }
+}
