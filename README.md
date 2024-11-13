@@ -1,2 +1,0 @@
-# celine
-Celine Hybrid

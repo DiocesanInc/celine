@@ -1,0 +1,12 @@
+.wp-block {
+    max-width: 100%;
+    margin-bottom: 3rem;
+}
+.wp-block-button__link {
+    border-radius: 10px;
+}
+.wp-block-separator {
+    border-bottom: none;
+    margin-block: 1.5rem;
+    height: 1px;
+}

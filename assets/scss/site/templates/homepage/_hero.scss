@@ -1,0 +1,110 @@
+// main: ../../../../../../style.scss
+.hero {
+    position: relative;
+    &.has-video {
+        height: var(--hero-height);
+        .hero-video {
+            margin-left: 50vw;
+            transform: translateX(-50%);
+        }
+    }
+    .hero-slide {
+        height: var(--hero-height);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .hero-video {
+        width: auto;
+        height: 100%;
+    }
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, black, transparent);
+    }
+    .hero-info {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        .hero-title {
+            font-size: var(--fs-xl);
+        }
+        .hero-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .the-button {
+                font-size: var(--fs-500);
+            }
+        }
+        .the-button + .the-button {
+            margin-top: 1.5rem;
+        }
+    }
+    .slick-dots {
+        bottom: 85px;
+        li.slick-active button,
+        li button:hover,
+        li button:focus {
+            background: white;
+        }
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .hero {
+        .hero-slider {
+            margin-bottom: 0;
+        }
+        .hero-info {
+            // top: 30vh;
+            .hero-links {
+                flex-direction: row;
+            }
+            .the-button + .the-button {
+                margin-top: 0;
+                margin-left: 1.5rem;
+            }
+        }
+        .slick-dots {
+            bottom: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .hero {
+        &.has-video {
+            max-height: var(--hero-height);
+            overflow: hidden;
+            height: auto;
+            .hero-video {
+                width: 100%;
+                height: auto;
+                margin-left: 0;
+                transform: none;
+            }
+        }
+        .hero-slide.parallax {
+            background-attachment: fixed;
+        }
+        .hero-info {
+            top: 45%;
+        }
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .hero {
+        .hero-info {
+            top: 30%;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+// main: ../../../style.scss
+body.category {
+    .site-main {
+        .result-container {
+            margin-top: 3.75rem;
+            .alm-reveal {
+                display: grid;
+                grid-template-columns: 100%;
+                gap: 1.5rem 0.9rem;
+                @media screen and (min-width: $tablet) {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                }
+                @media screen and (min-width: $desktop) {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1.5rem 0.9rem;
+                    .alm-item:first-child {
+                        grid-column: 1 / -1;
+                        flex-direction: row;
+                        .teaser-img {
+                            border-radius: 10px 0 0 10px;
+                            flex: 2;
+                            max-width: 40%;
+                        }
+                        .teaser-content-wrapper {
+                            width: 100%;
+                            text-align: center;
+                            flex: 3;
+                        }
+                        .links-container {
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+            .alm-btn-wrap .done {
+                display: none;
+            }
+        }
+        & > p {
+            display: none;
+        }
+    }
+}

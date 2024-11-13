@@ -1,0 +1,10 @@
+.content-area {
+  min-height: 20vh;
+}
+body.admin-bar {
+  margin-top: 44px;
+
+  @media screen and (min-width: 783px) {
+    margin-top: 32px;
+  }
+}

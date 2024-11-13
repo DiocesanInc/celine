@@ -1,0 +1,36 @@
+// main: ../../../../../../style.scss
+.grid-container {
+    --cols: 1;
+    --gap: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 1), 1fr);
+    gap: var(--gap);
+
+    @media screen and (min-width: $tablet) {
+        --cols: 2;
+        --gap: 2rem 1.5rem;
+    }
+    @media screen and (min-width: $desktop) {
+        --cols: 3;
+        --gap: 2.5rem 2rem;
+
+        &.staff-archive .staff-single:first-child {
+            grid-column: 1 / -1;
+            flex-direction: row;
+            .teaser-img {
+                border-radius: 10px 0 0 10px;
+                flex: 2;
+                max-height: 400px;
+            }
+            .teaser-content-wrapper {
+                width: 100%;
+                text-align: center;
+                flex: 3;
+            }
+            .links-container {
+                align-items: center;
+            }
+        }
+    }
+}

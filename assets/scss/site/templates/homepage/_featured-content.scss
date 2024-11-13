@@ -1,0 +1,19 @@
+.featured-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media screen and (min-width: $tablet) {
+    width: 100%;
+    flex-direction: row;
+
+    .featured-content-item-wrapper {
+      width: 33%;
+    }
+  }
+
+  .teaser-img {
+    width: 100%;
+  }
+}

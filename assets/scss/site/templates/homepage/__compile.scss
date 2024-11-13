@@ -1,0 +1,27 @@
+// main: ../../../../../../style.scss
+.page-template-homepage {
+    .banner-container {
+        margin-bottom: 5rem;
+    }
+    .featured-content-container,
+    .image-slider-container,
+    .news-container {
+        margin-bottom: 6rem;
+        &.slick-slider.slick-dotted {
+            margin-bottom: 70px !important;
+        }
+    }
+    @media screen and (min-width: $tablet){
+        .banner-container {
+            margin-bottom: 6rem;
+        }
+    }
+    @import "hero";
+    @import "featured-buttons";
+    @import "banner";
+    @import "featured-content";
+    @import "image-slider";
+    @import "news";
+    @import "parishes";
+    @import "parishes-carousel";
+}

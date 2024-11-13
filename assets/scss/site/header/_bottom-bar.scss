@@ -1,0 +1,18 @@
+// main: ../../../../../style.scss
+.bottom-bar {
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            .header_logo {
+                width: auto;
+                max-height: var(--logo-height, 5rem);
+                transition: 0.25s ease-in;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
