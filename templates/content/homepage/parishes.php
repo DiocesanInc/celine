@@ -10,7 +10,7 @@
  use Celine\Theme\Controllers\TemplateController;
  ?>
  <div class="parish-cluster" <?php echo TemplateController::isAnimated();?>>
-    <?php if(get_field('parish_scroll_title'));?> 
+    <?php if(get_field('parish_scroll_title')):?> 
     <h1 class="parish-scroll-title" <?php echo TemplateController::animate("fade");?>>
         <?php echo get_field('parish_scroll_title');?>
     </h1>
