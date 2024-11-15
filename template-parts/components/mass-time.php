@@ -8,8 +8,6 @@
  * @package celine
  */
 
-$label = $args['label'];
-$detail = $args['detail'];
 ?>
 
 <div class="mass-time">

@@ -105,6 +105,10 @@ class MinistriesController
         $contacts = self::getStaffMembersByMinistry($id);
 
         $cArr = [];
+
+        if (!$contacts) {
+            return null;
+        }
         foreach ($contacts as $contact) {
             $name = $contact["is_staff"] ? $contact["contact"]->post_title : $contact["contact_name"];
             $cArr[] = $name;
