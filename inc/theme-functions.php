@@ -131,7 +131,14 @@ if (!function_exists("add_search_form")) {
 if (!function_exists("my_form_submit_button")) {
     function my_form_submit_button($button, $form)
     {
-        return "<button type='submit' class='the-button has-primary-color has-primary-border-color has-transparent-background-color' id='gform_submit_button_{$form['id']}'>Submit</button>";
+        $fragment = WP_HTML_Processor::create_fragment($button);
+        $fragment->next_token();
+        $fragment->add_class('the-button');
+        $fragment->add_class('has-primary-color');
+        $fragment->add_class('has-primary-border-color');
+        $fragment->add_class('has-transparent-background-color');
+
+        return $fragment->get_updated_html();
     }
     add_filter('gform_submit_button', 'my_form_submit_button', 10, 2);
 }
