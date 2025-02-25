@@ -33,7 +33,7 @@ class MinistriesController
         $ministryGroups = [];
 
         foreach ($terms as $ministryGroup) {
-            $order = get_field("ministry_group_order", "ministry-group_$ministryGroup->term_id");
+            $order = get_field("ministry_group_order", "ministry-group_$ministryGroup->term_id") ? get_field("ministry_group_order", "ministry-group_$ministryGroup->term_id") : "";
 
             if ($order !== "") {
                 $ministryGroups[$order] = $ministryGroup;
