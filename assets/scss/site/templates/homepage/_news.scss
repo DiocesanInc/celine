@@ -7,6 +7,34 @@
         width: 100%;
         margin: 1rem auto;
     }
+    .news-item-wrapper {
+        .teaser-img {
+            aspect-ratio: 365 / 300;
+            @media screen and (min-width: $tablet) {
+              aspect-ratio: 370 / 305;
+            }
+        }
+        .teaser-content {
+            margin-bottom: 0.5rem;
+            @media screen and (min-width: $tablet) {
+                margin-bottom: 2rem;
+            }
+        }
+        .links-container {
+            padding-top: 0;
+            @media screen and (min-width: $tablet) {
+              padding-top: 20px;
+            }
+        }
+    }
+    // .slick-prev, .slick-next {
+    //     width: 35px;
+    //     height: 35px;
+    //     @media screen and (min-width: $tablet) {
+    //         width: 40px;
+    //         height: 40px;
+    //     }
+    // }
     .the-news {
         width: 95%;
         margin: 0 auto;

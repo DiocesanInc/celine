@@ -4,7 +4,7 @@
  Author:       Diocesan
  Author URI:   https://diocesan.com
  Description:  Celine Hybrid by Diocesan.
- Version:      2.5.3
+ Version:      2.5.4
  License:      GNU General Public License v3 or later, provided without any warranties—whether express or implied—and provided without any guarantees of fitness for a particular purpose or merchantability.
  License URI:  https://www.gnu.org/licenses/gpl-3.0.html
  Tags:         custom-background, custom-logo, custom-menu, Diocesan, DPI, featured-images, responsive-layout, threaded-comments, translation-ready
@@ -2207,6 +2207,30 @@ button {
   text-align: center;
   width: 100%;
   margin: 1rem auto;
+}
+.page-template-homepage .news-container .news-item-wrapper .teaser-img {
+  aspect-ratio: 365/300;
+}
+@media screen and (min-width: 768px) {
+  .page-template-homepage .news-container .news-item-wrapper .teaser-img {
+    aspect-ratio: 370/305;
+  }
+}
+.page-template-homepage .news-container .news-item-wrapper .teaser-content {
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .page-template-homepage .news-container .news-item-wrapper .teaser-content {
+    margin-bottom: 2rem;
+  }
+}
+.page-template-homepage .news-container .news-item-wrapper .links-container {
+  padding-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .page-template-homepage .news-container .news-item-wrapper .links-container {
+    padding-top: 20px;
+  }
 }
 .page-template-homepage .news-container .the-news {
   width: 95%;
