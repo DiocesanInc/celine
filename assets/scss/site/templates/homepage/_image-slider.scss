@@ -2,5 +2,11 @@
   .image-slider-slide {
     flex-direction: column-reverse;
     justify-content: flex-end;
+    img.teaser-img {
+      aspect-ratio: 365 / 300;
+      @media screen and (min-width: $tablet) {
+        aspect-ratio: 370 / 305;
+      }
+    }
   }
 }
