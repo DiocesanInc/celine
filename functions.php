@@ -186,6 +186,20 @@ if (class_exists("GF_Field_Checkbox")) {
     GF_Fields::register(new GF_Field_Ministries());
 }
 
+
+function add_custom_class_to_buttons($block_content, $block)
+{
+    // Check if the block is a button block
+    if ('core/button' === $block['blockName']) {
+        // Add your custom class to the block
+        $block_content = str_replace('wp-block-button__link', 'wp-block-button__link the-button', $block_content);
+    }
+
+    return $block_content;
+}
+add_filter('render_block', 'add_custom_class_to_buttons', 10, 2);
+
+
 require get_template_directory() . "/update-checker/plugin-update-checker.php";
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;

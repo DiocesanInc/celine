@@ -4,7 +4,7 @@
  Author:       Diocesan
  Author URI:   https://diocesan.com
  Description:  Celine Hybrid by Diocesan.
- Version:      2.6.1
+ Version:      2.6.2
  License:      GNU General Public License v3 or later, provided without any warranties—whether express or implied—and provided without any guarantees of fitness for a particular purpose or merchantability.
  License URI:  https://www.gnu.org/licenses/gpl-3.0.html
  Tags:         custom-background, custom-logo, custom-menu, Diocesan, DPI, featured-images, responsive-layout, threaded-comments, translation-ready
@@ -283,6 +283,22 @@ body.no-scroll {
   background: var(--clr-primary);
   border-color: var(--clr-primary);
   --link-color-hover: white;
+}
+
+.wp-block-button__link.the-button {
+  border: 3px solid;
+  padding: var(--button-padding);
+  color: var(--clr-primary);
+  background: transparent;
+}
+.wp-block-button__link.the-button:hover {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  --link-color-hover: white;
+}
+
+.wp-block-button__link.the-button[class*=-background-color] {
+  border: none !important;
 }
 
 .read-more-link {
@@ -2969,6 +2985,9 @@ body.category .site-main > p {
 }
 .ministries-container .ministry-slider .ministry-group .slick-list .slick-track {
   margin-inline: 0 auto;
+}
+.ministries-container .ministry-slider .ministry-group .slick-list a.ministry-wrapper {
+  text-decoration: none;
 }
 .ministries-container .ministry-slider .ministry-group .slick-list .ministry-wrapper {
   margin: 0 0.5rem 3rem;

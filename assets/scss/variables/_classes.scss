@@ -213,6 +213,20 @@ body.no-scroll {
     --link-color-hover: white;
   }
 }
+.wp-block-button__link.the-button {
+  border: 3px solid;
+  padding: var(--button-padding);
+  color: var(--clr-primary);
+  background: transparent;
+  &:hover {
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+    --link-color-hover: white;
+  }
+}
+.wp-block-button__link.the-button[class*='-background-color'] {
+  border: none !important;
+}
 
 .read-more-link {
   padding: 0.875rem 1.75rem;
