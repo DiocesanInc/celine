@@ -297,7 +297,7 @@ body.no-scroll {
   --link-color-hover: white;
 }
 
-.wp-block-button__link.the-button[class*=-background-color] {
+.wp-block-button__link.the-button[class*=-background-color], .wp-block-button__link.the-button[class*=-gradient-background] {
   border: none !important;
 }
 
