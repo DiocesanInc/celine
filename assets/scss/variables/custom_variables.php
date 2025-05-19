@@ -179,11 +179,16 @@ $genericCss->addCssRule(
     )
 );
 
+$weights = array("normal-", "bolder-", "bold-");
+$none = array("","","");
+
 $genericCss->addCssRule(
     "a, .ui-widget-content a",
     array(
         "color" => getField("anchor_link", "options", true, "var(--clr-primary)")["font_color"],
-        "text-decoration" => get_field("anchor_link", "options")["font_style"] ? "underline" : "none"
+        "text-decoration" => get_field("anchor_link", "options")["font_style"] ? "underline" : "none",
+        "font-weight" => str_replace("-italic", "", get_field("anchor_link", "options")["font_weight"]),
+        "font-style" => str_replace($weights, $none, get_field("anchor_link", "options")["font_weight"])
     )
 );
 

@@ -2912,10 +2912,10 @@ if (function_exists('acf_add_local_field_group')) :
                             'id' => '',
                         ),
                         'choices' => array(
-                            'regular' => 'Regular',
-                            'regular-italic' => 'Regular Italic',
-                            'semibold' => 'Semibold',
-                            'semibold-italic' => 'Semibold Italic',
+                            'normal' => 'Regular',
+                            'normal-italic' => 'Regular Italic',
+                            'bolder' => 'Semibold',
+                            'bolder-italic' => 'Semibold Italic',
                             'bold' => 'Bold',
                             'bold-italic' => 'Bold Italic',
                         ),
@@ -7907,6 +7907,7 @@ Linkt text will be used for the text of the button',
                     ),
                 ),
             ),
+
         ),
         'location' => array(
             array(

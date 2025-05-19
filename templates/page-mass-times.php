@@ -19,9 +19,9 @@ get_header();
     <main class="site-main mass-times" id="main">
         <div class="entry-content limit-width">
 
-            <?php get_template_part('templates/content/mass-times'); ?>
+        <?php the_content(); ?>
 
-            <?php the_content(); ?>
+            <?php get_template_part('templates/content/mass-times'); ?>
 
         </div>
 

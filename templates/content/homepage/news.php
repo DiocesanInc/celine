@@ -11,8 +11,9 @@
 use Celine\Theme\Controllers\NewsController;
 use Celine\Theme\Controllers\TemplateController;
 
-?>
+$news = NewsController::getNews();
 
+if (count($news) >= 1) : ?>
 <div class="news-container limit-width" <?php echo TemplateController::isAnimated(); ?>
     data-category="<?php echo NewsController::getNewsCategory(); ?>">
     <?php if (get_field("news_title")) : ?>
@@ -20,8 +21,6 @@ use Celine\Theme\Controllers\TemplateController;
             <?php the_field('news_title'); ?>
         </h2>
     <?php endif; ?>
-
-    <?php $news = NewsController::getNews(); ?>
 
     <div class="news-slider same-height has-margin">
         <?php foreach ($news as $post) :
@@ -47,3 +46,4 @@ use Celine\Theme\Controllers\TemplateController;
         ?>
     </div>
 </div>
+<?php endif;
