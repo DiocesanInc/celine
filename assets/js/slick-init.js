@@ -125,7 +125,7 @@ jQuery(document).ready(function ($) {
   $sliderArrows.attr("data-aos", "fade-down");
 
   /** Ministry Slider */
-  $(".ministries-container .ministry-slider .ministry-group").slick({
+  $(".ministry-slider .ministry-group").slick({
     autoplay: false,
     arrows: true,
     dots: false,
