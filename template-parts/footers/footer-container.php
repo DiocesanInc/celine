@@ -20,7 +20,7 @@ use Celine\Theme\Controllers\TemplateController;
         "contact",
     ];
     foreach ($rows as $row) : ?>
-    <div class="footer-<?php echo $row; ?> footer-row" <?php echo TemplateController::animate("fade", 120); ?>>
+    <div class="footer-<?php echo $row; ?> footer-row" <?php echo TemplateController::animate("fade", 100); ?>>
         <?php get_template_part("template-parts/footers/footer", $row); ?>
     </div>
     <?php endforeach; ?>

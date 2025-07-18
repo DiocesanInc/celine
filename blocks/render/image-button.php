@@ -21,9 +21,9 @@ $align_class = get_field('full_width') ? ' full-width' : '';
 if (get_field('is_manual')) {
     $bkgd   = get_field('bkgd') ? get_field('bkgd')['url'] : null;
     $link   = get_field('link');
-    $target = $link['target'];
-    $title  = $link['title'];
-    $url    = $link['url'];
+    $target = $link['target'] ?? '';
+    $title  = $link['title'] ?? '';
+    $url    = $link['url'] ?? '';
 } elseif (get_field('page')) {
     $page   = get_field('page');
     $bkgd   = get_the_post_thumbnail_url($page->ID);
