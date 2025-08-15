@@ -6404,6 +6404,25 @@ if (function_exists('acf_add_local_field_group')) :
                 'rows' => '',
                 'new_lines' => '',
             ),
+            array(
+                'key' => 'field_6138d1b042092342347',
+                'label' => 'Ministries Order',
+                'name' => 'ministries_orderby',
+                'type' => 'true_false',
+                'instructions' => 'Sort Ministries either by title or by menu order (use in tandem with a plugin like WP Sort Posts)',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '25',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 0,
+                'ui' => 1,
+                'ui_on_text' => 'Menu Order',
+                'ui_off_text' => 'Title',
+            ),
         ),
         'location' => array(
             array(

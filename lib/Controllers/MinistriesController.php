@@ -21,11 +21,17 @@ class MinistriesController
 
     public static function getMinistryGroups()
     {
+        $orderby = get_field("ministries_orderby", "options") ? "menu_order" : "title";
+
+        if (!$orderby) {
+            $orderby = "title";
+        }
+
         $terms = get_terms(
             array(
                 'taxonomy'   => self::_getTax(),
                 'hide_empty' => false,
-                "orderby" => "title",
+                "orderby" => $orderby,
                 "order" => "ASC"
             )
         );
@@ -51,6 +57,13 @@ class MinistriesController
 
     public static function getMinistriesByGroup($term_id)
     {
+
+        $orderby = get_field("ministries_orderby", "options") ? "menu_order" : "title";
+
+        if (!$orderby) {
+            $orderby = "title";
+        }
+
         $args = array(
             "post_type" => self::_getPosttype(),
             "tax_query" => array(
@@ -60,7 +73,7 @@ class MinistriesController
                     "terms" => $term_id
                 )
             ),
-            "orderby" => "title",
+            "orderby" => $orderby,
             "order" => "ASC",
             "posts_per_page" => -1
         );
