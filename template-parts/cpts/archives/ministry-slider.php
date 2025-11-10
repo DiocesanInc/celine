@@ -21,7 +21,7 @@ use Celine\Theme\Controllers\TemplateController;
             <h2 <?php echo TemplateController::animate("fade") ?>><?php echo $group->name; ?></h2>
             <?php foreach ($ministries as $ministry) : ?>
                 <?php $excerpt = $ministry->post_excerpt ? $ministry->post_excerpt : $ministry->post_content; ?>
-                <?php if (get_field("ministry_lightbox")) : ?>
+                <?php if (!get_field("ministry_lightbox")) : ?>
                     <div class="ministry-wrapper teaser-box" data-open-lightbox="true"
                         data-excerpt="<?php echo wp_trim_words($excerpt, 25); ?>" data-title="<?php echo $ministry->post_title; ?>"
                         data-image="<?php echo get_the_post_thumbnail_url($ministry); ?>"
@@ -52,7 +52,7 @@ use Celine\Theme\Controllers\TemplateController;
         </div>
     <?php endforeach; ?>
 </div>
-<?php if (get_field("ministry_lightbox")) : ?>
+<?php if (!get_field("ministry_lightbox")) : ?>
     <div class="lightbox-overlay"></div>
     <div id="ministry-lightbox" class="lightbox">
         <div class="lightbox-close"></div>
