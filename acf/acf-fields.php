@@ -1043,6 +1043,35 @@ if (function_exists('acf_add_local_field_group')) :
                 'ui_on_text' => 'Slider',
                 'ui_off_text' => 'Funnel',
             ),
+            array(
+                'key' => 'field_69120814eeb66',
+                'label' => 'Ministry Lightbox',
+                'name' => 'ministry_lightbox',
+                'aria-label' => '',
+                'type' => 'true_false',
+                'instructions' => '*Choose whether to open a Lightbox when clicking a ministry or going to a single page',
+                'required' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_614a219d13589',
+                            'operator' => '==',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 0,
+                'allow_in_bindings' => 0,
+                'ui_on_text' => 'Lightbox',
+                'ui_off_text' => 'Single Page',
+                'ui' => 1,
+            ),
         ),
         'location' => array(
             array(

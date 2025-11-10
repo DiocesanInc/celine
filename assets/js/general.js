@@ -1,7 +1,9 @@
 jQuery(document).ready(function ($) {
   document.addEventListener("click", function (e) {
     if (
-      e.target.matches(".ministry-wrapper.slick-active") ||
+      e.target.matches(
+        ".ministry-wrapper.slick-active[data-open-lightbox='true']"
+      ) ||
       e.target.matches(".staff-single button")
     ) {
       document.querySelector(".lightbox").classList.add("open");
