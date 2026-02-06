@@ -28,7 +28,7 @@ class SetupHelper
 
         add_filter("the_content", array(__CLASS__, "diocesanAutoHideEmail"), 30);
         add_filter("acf_the_content", array(__CLASS__, "diocesanAutoHideEmail"), 30);
-        add_filter("acf/load_value", array(__CLASS__, "diocesanAutoHideEmail"), 30);
+        // add_filter("acf/load_value", array(__CLASS__, "diocesanAutoHideEmail"), 30);
 
         add_action('admin_head', array(__CLASS__, 'hideACFCog'));
 
