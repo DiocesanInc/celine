@@ -4,7 +4,7 @@
  Author:       Diocesan
  Author URI:   https://diocesan.com
  Description:  Celine Hybrid by Diocesan.
- Version:      2.7.5
+ Version:      2.7.6
  License:      GNU General Public License v3 or later, provided without any warranties—whether express or implied—and provided without any guarantees of fitness for a particular purpose or merchantability.
  License URI:  https://www.gnu.org/licenses/gpl-3.0.html
  Tags:         custom-background, custom-logo, custom-menu, Diocesan, DPI, featured-images, responsive-layout, threaded-comments, translation-ready
@@ -49,6 +49,14 @@
   --button-padding: 1rem 2rem;
   --button-padding-no-border: calc(1rem + var(--border-width)) calc(var(--border-width) + 2rem);
   --box-shadow: 0 20px 25px #293d4729;
+}
+:root .the-button {
+  --box-shadow: 0 10px 25px #293d4729;
+}
+:root .image-slider-container {
+  --box-shadow: 0 50px 66px #293d471a;
+}
+:root {
   --font-color-main: #1a1818;
   --link-color-hover: inherit;
   --link-text-decoration: none;
@@ -58,12 +66,6 @@
   /**HERO**/
   --hero-height: 93vh;
   --limit-width: 80%;
-}
-:root .the-button {
-  --box-shadow: 0 10px 25px #293d4729;
-}
-:root .image-slider-container {
-  --box-shadow: 0 50px 66px #293d471a;
 }
 :root header,
 :root footer,
@@ -700,6 +702,16 @@ figcaption {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .wp-block-buttons > .wp-block-button.wp-block-button__width-25 {
+    width: calc(50% - var(--wp--style--block-gap, 0.5em) * 0.75);
+  }
+}
+@media screen and (max-width: 576px) {
+  .wp-block-buttons > .wp-block-button.has-custom-width {
+    width: 100%;
+  }
+}
 .site-main .wp-block-cover {
   border-radius: 10px;
   box-shadow: var(--box-shadow);
@@ -2337,7 +2349,6 @@ button {
 .page-template-homepage .parish-cluster {
   margin: -20px auto 6rem;
   padding: 45px 0;
-  /* Map Slider */
 }
 .page-template-homepage .parish-cluster.parishFlex {
   margin: 20px auto 0;
@@ -2391,6 +2402,9 @@ button {
 }
 .page-template-homepage .parish-cluster.parishFlex .parishScroll .testimonials-carousel .testimonial.slick-active {
   opacity: 1;
+}
+.page-template-homepage .parish-cluster {
+  /* Map Slider */
 }
 .page-template-homepage .parish-cluster .parish-map-title {
   margin-left: 8%;
@@ -2456,9 +2470,6 @@ button {
   }
 }
 @media screen and (min-width: 1024px) {
-  .page-template-homepage .parish-cluster {
-    /* Map Slider */
-  }
   .page-template-homepage .parish-cluster.parishFlex {
     flex-direction: row;
   }
@@ -2471,6 +2482,9 @@ button {
   .page-template-homepage .parish-cluster.parishFlex .parishScroll {
     margin: 0 0 0 20px;
     width: 50%;
+  }
+  .page-template-homepage .parish-cluster {
+    /* Map Slider */
   }
   .page-template-homepage .parish-cluster .parish-maps {
     display: flex;
@@ -3310,7 +3324,6 @@ body.category .site-main > p {
 
 .slick-slider {
   /** ARROWS **/
-  /** DOTS **/
 }
 .slick-slider .slick-prev,
 .slick-slider .slick-next {
@@ -3362,6 +3375,9 @@ body.category .site-main > p {
 .slick-slider .slick-next::before {
   content: "\f061";
 }
+.slick-slider {
+  /** DOTS **/
+}
 .slick-slider .slick-dots button {
   border: 1px solid #000000;
   border-radius: 50%;
@@ -3389,7 +3405,6 @@ body.category .site-main > p {
   }
   .image-slider-container.slick-slider {
     /** ARROWS **/
-    /** DOTS **/
   }
   .image-slider-container.slick-slider .slick-next,
   .image-slider-container.slick-slider .slick-prev {
@@ -3401,6 +3416,9 @@ body.category .site-main > p {
   }
   .image-slider-container.slick-slider .slick-next {
     left: 60px;
+  }
+  .image-slider-container.slick-slider {
+    /** DOTS **/
   }
   .image-slider-container.slick-slider .slick-dots {
     top: 0;
