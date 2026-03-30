@@ -79,6 +79,7 @@ class TemplateController
         } elseif (is_archive()) {
             if (is_post_type_archive('staff')) {
                 $title = "Our Staff";
+                $bkgd = get_field('staff_archive_image', 'options')["url"];
             } elseif (is_tax()) {
                 $title = preg_replace("/^([\w ]+)Group:\s+/i", "", get_the_archive_title());
             } else {

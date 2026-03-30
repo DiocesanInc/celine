@@ -6557,7 +6557,7 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                 ),
                 'wrapper' => array(
-                    'width' => '25',
+                    'width' => '33',
                     'class' => '',
                     'id' => '',
                 ),
@@ -6566,6 +6566,70 @@ if (function_exists('acf_add_local_field_group')) :
                 'ui' => 1,
                 'ui_on_text' => '',
                 'ui_off_text' => '',
+            ),
+            array(
+                'key' => 'field_69cab78f28a53',
+                'label' => 'Autoplay',
+                'name' => 'hero_autoplay',
+                'aria-label' => '',
+                'type' => 'true_false',
+                'instructions' => '*Choose whether to automatically advance the slider or not',
+                'required' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_5e7cae336b5e8',
+                            'operator' => '!=',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '33',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 1,
+                'allow_in_bindings' => 1,
+                'ui_on_text' => 'Yes',
+                'ui_off_text' => 'No',
+                'ui' => 1,
+            ),
+            array(
+                'key' => 'field_69cab7ef28a54',
+                'label' => 'Autoplay Speed',
+                'name' => 'hero_autoplay_speed',
+                'aria-label' => '',
+                'type' => 'range',
+                'instructions' => '*Set the autoplay speed in ms',
+                'required' => 1,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_5e7cae336b5e8',
+                            'operator' => '!=',
+                            'value' => '1',
+                        ),
+                        array(
+                            'field' => 'field_69cab78f28a53',
+                            'operator' => '==',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '33',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => 5000,
+                'min' => 1000,
+                'max' => 10000,
+                'allow_in_bindings' => 0,
+                'step' => 1000,
+                'prepend' => '',
+                'append' => 'ms',
             ),
             array(
                 'key' => 'field_5e7cae3367ff3',
@@ -6584,7 +6648,7 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                 ),
                 'wrapper' => array(
-                    'width' => '75',
+                    'width' => '100',
                     'class' => '',
                     'id' => '',
                 ),

@@ -17,29 +17,33 @@ jQuery(document).ready(function ($) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 1025,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 426,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   });
   /** Hero Slider */
-  $(".page-template-homepage .hero-slider").slick({
-    autoplay: true,
+  const $heroSlider = $(".page-template-homepage .hero-slider");
+  const heroAutoplay = $heroSlider.data("autoplay");
+  const heroAutoplaySpeed = $heroSlider.data("autoplaySpeed");
+
+  $heroSlider.slick({
+    autoplay: heroAutoplay ? true : false,
     arrows: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: heroAutoplaySpeed ? heroAutoplaySpeed : 5000,
     cssEase: "linear",
     dots: true,
     arrows: false,
@@ -51,7 +55,7 @@ jQuery(document).ready(function ($) {
 
   /** Featured Content & News Slider */
   $(
-    ".featured-content-container .featured-content-slider, .news-container .news-slider"
+    ".featured-content-container .featured-content-slider, .news-container .news-slider",
   ).slick({
     autoplay: false,
     arrows: true,
@@ -78,7 +82,7 @@ jQuery(document).ready(function ($) {
 
   /** Get Pagination Style (arrows or dots) for Image Slider */
   const paginationStyle = $(".image-slider-container").attr(
-    "data-pagination-style"
+    "data-pagination-style",
   );
 
   /** set on slick init listener for Image Slider */
@@ -98,7 +102,7 @@ jQuery(document).ready(function ($) {
   }
 
   const $imageSliderQuote = $(
-    ".page-template-homepage .image-slider-container[data-isanimated=true] .slick-slide.slick-current .teaser-content-wrapper"
+    ".page-template-homepage .image-slider-container[data-isanimated=true] .slick-slide.slick-current .teaser-content-wrapper",
   );
 
   function addAOS() {
@@ -120,7 +124,7 @@ jQuery(document).ready(function ($) {
   });
 
   const $sliderArrows = $(
-    ".featured-content-container[data-isanimated=true] .slick-arrow, .image-slider-container[data-isanimated=true] .slick-arrow, .news-container[data-isanimated=true] .slick-arrow"
+    ".featured-content-container[data-isanimated=true] .slick-arrow, .image-slider-container[data-isanimated=true] .slick-arrow, .news-container[data-isanimated=true] .slick-arrow",
   );
   $sliderArrows.attr("data-aos", "fade-down");
 

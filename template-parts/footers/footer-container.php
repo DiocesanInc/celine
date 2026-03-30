@@ -18,11 +18,12 @@ use Celine\Theme\Controllers\TemplateController;
         "content",
         "social-media",
         "contact",
+        "links"
     ];
     foreach ($rows as $row) : ?>
-    <div class="footer-<?php echo $row; ?> footer-row" <?php echo TemplateController::animate("fade", 100); ?>>
-        <?php get_template_part("template-parts/footers/footer", $row); ?>
-    </div>
+        <div class="footer-<?php echo $row; ?> footer-row" <?php echo TemplateController::animate("fade", 100); ?>>
+            <?php get_template_part("template-parts/footers/footer", $row); ?>
+        </div>
     <?php endforeach; ?>
 </div>
 
