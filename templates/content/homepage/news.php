@@ -45,5 +45,8 @@ if (count($news) >= 1) : ?>
         wp_reset_postdata();
         ?>
     </div>
+    <div class="news-title">
+        <a class="the-button has-primary-color has-primary-border-color has-transparent-background-color" href="<?php echo NewsController::getNewsCategory();?>">View All News</a>
+    </div>
 </div>
 <?php endif;
