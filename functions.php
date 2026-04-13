@@ -48,6 +48,7 @@ function load_theme_file($path)
 if (strpos(get_site_url(), "celine.diocesanweb") === false) {
     load_theme_file("acf/acf-fields.php");
     load_theme_file("acf/acf-category-image.php");
+    load_theme_file("acf/acf-staff-archive-image.php");
 }
 
 /**

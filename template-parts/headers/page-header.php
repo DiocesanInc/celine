@@ -15,6 +15,8 @@ $info = TemplateController::getPageHeader();
 $bkgd = $info["bkgd"];
 
 $bg = "background-image: url($bkgd);";
+
+
 ?>
 
 <div class="page-header" style="<?php echo $bg; ?>">
