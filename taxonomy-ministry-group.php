@@ -21,14 +21,14 @@ get_header();
 <div class="content-area" id="primary">
     <main class="site-main" id="main">
         <?php if (have_posts()) : ?>
-            <div class="entry-content limit-width">
-                <?php if (get_post_type() === 'ministry' && term_description()) : ?>
-                    <div class="<?php echo get_post_type(); ?>-description taxonomy-description">
-                        <?php echo term_description(); ?>
-                    </div>
-                <?php endif; ?>
-                <div class="<?php echo get_post_type(); ?>-container taxonomy-container grid-container">
-                    <?php $q = new WP_Query(
+        <div class="entry-content limit-width">
+            <?php if (get_post_type() === 'ministry' && term_description()) : ?>
+            <div class="<?php echo get_post_type(); ?>-description taxonomy-description">
+                <?php echo term_description(); ?>
+            </div>
+            <?php endif; ?>
+            <div class="<?php echo get_post_type(); ?>-container taxonomy-container grid-container">
+                <?php $q = new WP_Query(
                         array(
                             'post_type'      => get_post_type(),
                             'post_status'    => 'publish',
@@ -50,8 +50,14 @@ get_header();
                     while ($q->have_posts()) : $q->the_post();
                         get_template_part("template-parts/cpts/singles/ministry", "group");
                     endwhile; ?>
-                </div>
             </div>
+            <div class="back-button-container align-center" <?php echo TemplateController::animate("fade-up"); ?>>
+                <p>Go back to all ministries</p>
+                <a href="<?php echo $backLink; ?>"
+                    class="the-button has-primary-color has-primary-border-color has-transparent-background-color"
+                    title="ministries">Go Back</a>
+            </div>
+        </div>
         <?php else :
             get_template_part('template-parts/content', 'none');
         endif; ?>
