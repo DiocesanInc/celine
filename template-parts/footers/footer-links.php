@@ -10,8 +10,10 @@
 
 ?>
 
-<h1 class="footer-heading has-white-color font-header">Quick Links</h1>
 <?php if (have_rows('quick_links', 'options')) : ?>
+  <h5>
+      <?php echo getField("quick_links_header", "options", true, "Quick Links"); ?>
+  </h5>
   <div class="footer-links-container">
     <?php while (have_rows('quick_links', 'options')) : the_row();
       $link = get_sub_field('link'); ?>
