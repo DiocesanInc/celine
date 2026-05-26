@@ -8883,7 +8883,7 @@ Linkt text will be used for the text of the button',
                 'name' => 'quick_links',
                 'type' => 'repeater',
                 'instructions' => '',
-                'required' => 1,
+                'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
