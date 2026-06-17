@@ -20,11 +20,11 @@ else :
 
     if ($staff->have_posts()) : ?>
 
-<div class="grid-container staff-archive">
-    <?php while ($staff->have_posts()) : $staff->the_post();
+        <div class="grid-container staff-archive">
+            <?php while ($staff->have_posts()) : $staff->the_post();
                 get_template_part('template-parts/cpts/singles/staff-member');
             endwhile; ?>
-</div>
+        </div>
 
 
 <?php
@@ -34,7 +34,9 @@ endif; ?>
 <div class="lightbox-overlay"></div>
 <div id="staff-lightbox" class="lightbox">
     <div class="lightbox-close"></div>
-    <div class="lightbox-image"></div>
+    <?php if (!get_field("hide_staff_member_photos", "options")) : ?>
+        <div class="lightbox-image"></div>
+    <?php endif; ?>
     <div class="lightbox-content">
         <h4 class="lightbox-title"></h4>
         <div class="lightbox-excerpt"></div>
