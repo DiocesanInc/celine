@@ -4,7 +4,7 @@
  Author:       Diocesan
  Author URI:   https://diocesan.com
  Description:  Celine Hybrid by Diocesan.
- Version:      2.8.2
+ Version:      2.8.3
  License:      GNU General Public License v3 or later, provided without any warranties—whether express or implied—and provided without any guarantees of fitness for a particular purpose or merchantability.
  License URI:  https://www.gnu.org/licenses/gpl-3.0.html
  Tags:         custom-background, custom-logo, custom-menu, Diocesan, DPI, featured-images, responsive-layout, threaded-comments, translation-ready
@@ -175,8 +175,11 @@
   .lightbox {
     flex-direction: row;
   }
-  .lightbox .lightbox-image,
   .lightbox .lightbox-content {
+    height: 100%;
+  }
+  .lightbox:has(.lightbox-image) .lightbox-image,
+  .lightbox:has(.lightbox-image) .lightbox-content {
     width: 50%;
     height: 100%;
   }
@@ -299,7 +302,8 @@ body.no-scroll {
   --link-color-hover: white;
 }
 
-.wp-block-button__link.the-button[class*=-background-color], .wp-block-button__link.the-button[class*=-gradient-background] {
+.wp-block-button__link.the-button[class*=-background-color],
+.wp-block-button__link.the-button[class*=-gradient-background] {
   border: none !important;
 }
 
