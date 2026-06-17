@@ -13,13 +13,23 @@ use Celine\Theme\Controllers\TemplateController;
 ?>
 
 <div class="footer-container limit-width">
-    <?php
-    $rows = [
-        "content",
-        "social-media",
-        "contact",
-        "links"
-    ];
+    <?php if (have_rows('quick_links', 'options')) : ?>
+        <?php
+        $rows = [
+            "content",
+            "social-media",
+            "contact",
+            "links"
+        ];?>
+    <?php else: ?>
+        <?php
+        $rows = [
+            "content",
+            "social-media",
+            "contact"
+        ];?>
+    <?php endif;
+    
     foreach ($rows as $row) : ?>
         <div class="footer-<?php echo $row; ?> footer-row" <?php echo TemplateController::animate("fade", 100); ?>>
             <?php get_template_part("template-parts/footers/footer", $row); ?>
