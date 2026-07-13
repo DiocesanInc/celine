@@ -73,6 +73,14 @@
             }
         }
     }
+    .news-button {
+        text-align: center;
+        width: 100%;
+        margin: 5rem auto 0;
+        @media screen and (min-width: $desktop) {
+            margin: 3rem auto 0;
+        }
+    }
     @media screen and (max-width: 1199px) {
         .the-news {
             .slick-list {
