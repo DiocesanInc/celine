@@ -12,6 +12,7 @@ use Celine\Theme\Controllers\NewsController;
 use Celine\Theme\Controllers\TemplateController;
 
 $news = NewsController::getNews();
+$newsCat = NewsController::getNewsCategory();
 
 if (count($news) >= 1) : ?>
 <div class="news-container limit-width" <?php echo TemplateController::isAnimated(); ?>
@@ -45,8 +46,8 @@ if (count($news) >= 1) : ?>
         wp_reset_postdata();
         ?>
     </div>
-    <div class="news-title">
-        <a class="the-button has-primary-color has-primary-border-color has-transparent-background-color" href="<?php echo NewsController::getNewsCategory();?>">View All News</a>
+    <div class="news-button">
+        <a class="the-button has-primary-color has-primary-border-color has-transparent-background-color" href="<?php echo $newsCat ? $newsCat : '/category/news';?>">View All News</a>
     </div>
 </div>
 <?php endif;

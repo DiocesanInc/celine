@@ -54,6 +54,10 @@
         font-size: var(--fs-300);
     }
 
+    .footer-links-container {
+        @include flex(c, column);
+    }
+
     @media screen and (min-width: $laptop) {
         display: flex;
         flex-direction: row;
