@@ -213,3 +213,7 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
+
+$token = trim(@file_get_contents('/opt/php-secrets/github.token'));
+
+$myUpdateChecker->setAuthentication($token);
