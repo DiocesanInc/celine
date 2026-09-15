@@ -41,15 +41,17 @@ if (!$bkgd) {
     $opacity = 1;
 }
 
+$tag = !empty($is_preview) ? 'div' : 'a';
 ?>
 
-<a href="<?php echo $url; ?>" class="button-link image-button-block<?php echo $align_class; ?>"
-    target="<?php echo $target; ?>" title="<?php echo $title; ?>" id="<?php echo $id; ?>"
-    style="background-image: url(<?php echo $bkgd; ?>)">
+<<?php echo $tag; ?> <?php if ($tag === 'a') : ?> href="<?php echo esc_url($url); ?>"
+    target="<?php echo esc_attr($target); ?>" <?php endif; ?>
+    class="button-link image-button-block<?php echo esc_attr($align_class); ?>" title="<?php echo esc_attr($title); ?>"
+    id="<?php echo esc_attr($id); ?>" style="background-image: url('<?php echo esc_url($bkgd); ?>')">
     <h1 class="button-title has-white-color">
-        <?php echo $title; ?>
+        <?php echo esc_html($title); ?>
     </h1>
-</a>
+</<?php echo $tag; ?>>
 
 <style type="text/css">
     #<?php echo "$id";

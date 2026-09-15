@@ -1,4 +1,8 @@
 // main: ../../../../../style.scss
+.page-template-page-no-header #primary {
+    padding-top: calc(var(--masthead-height, calc(var(--logo-height, 5rem) + 20px)) + var(--no-header-content-gap, 2rem));
+}
+
 .error-404,
 .search .site-main {
     width: 90%;

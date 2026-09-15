@@ -39,7 +39,7 @@ use Celine\Theme\Helpers\SetupHelper;
         <?php if (SetupHelper::isAcfInstalled()) : ?>
             <a href="#content" class="skip-link screen-reader-text"><?php esc_html_e("Skip to content", "celine"); ?></a>
 
-            <header class="site-header" id="masthead">
+            <header class="site-header<?php echo is_page_template('templates/page-no-header.php') ? ' sticky always-sticky' : ''; ?>" id="masthead">
                 <div class="the-header">
                     <?php get_template_part("template-parts/headers/bar", "bottom"); ?>
                 </div>
