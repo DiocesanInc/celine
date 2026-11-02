@@ -12,7 +12,7 @@
 
 <div class="mass-time">
     <strong class="mass-time-day"><?php the_sub_field('day'); ?></strong>
-    <div class="mass-time-time">
+    <div class="mass-time-time notranslate" translate="no">
         <?php the_sub_field('times'); ?>
     </div>
 </div>
